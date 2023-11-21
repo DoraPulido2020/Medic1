@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Medic1</string>
+    <string name="registrarme_como">Registrarme como:</string>
+    <string name="paciente">Paciente</string>
+    <string name="medico">Médico</string>
+    <string name="secretaria">Secretaria</string>
+    <string name="usuario">Usuario</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="crear_cuenta_Medic">Crear cuenta Medic</string>
+    <string name="olvide_mi_cuenta">Olvidé mi contraseña</string>
+    <string name="registro_paciente">Registro Paciente</string>
+    <string name="nombres">Nombres</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="confirmacion_contrasena">Confirmación de contraseña</string>
+    <string name="celular">Celular</string>
+    <string name="correo_electronico">Correo electrónico</string>
+    <string name="fecha_nacimiento">Fecha de nacimiento</string>
+    <string name="registrar">Registrar</string>
+    <string name="registro_medico">Registro Médico</string>
+    <string name="registro_secretaria">Registro Secretaría</string>
+    <string name="recuperar_contrasena">Recuperar contraseña</string>
+    <string name="cedula">N°Identificación</string>
+    <string name="enviar">Enviar</string>
+    <string name="agendar_cita">Agenda tú cita</string>
+    <string name="historial_citas">Historial de citas</string>
+    <string name="resutados">Resultados</string>
+    <string name="ubicacion">Ubicación</string>
+    <string name="contactos">Contactos</string>
+
+</resources>
