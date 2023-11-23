@@ -27,5 +27,14 @@
     <string name="resutados">Resultados</string>
     <string name="ubicacion">Ubicación</string>
     <string name="contactos">Contactos</string>
+    <string name="fecha">Fecha</string>
+    <string name="hora">Hora</string>
+    <string name="consultorio">Consultorio</string>
+    <string name="estado">Estado</string>
+    <string name="valor">Valor</string>
+    <string name="examen">Examen</string>
+    <string name="ver">Ver</string>
+    <string name="tipo">Tipo</string>
+
 
 </resources>
