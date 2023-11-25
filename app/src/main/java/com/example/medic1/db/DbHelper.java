@@ -19,11 +19,20 @@ public class DbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        db.execSQL("CREATE TABLE Medicos ("+
-                "id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "nombre TEXT NOT NULL," +
+        db.execSQL("CREATE TABLE usuario ("+
+                "idUsuario INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "nombres TEXT NOT NULL," +
+                "apellidos TEXT NOT NULL," +
+                "numeroCedula INTEGER NOT NULL," +
                 "telefono TEXT NOT NULL," +
-                "correo_electronico TEXT)");
+                "nombreUsuario TEXT NOT NULL," +
+                "contrasena TEXT NOT NULL," +
+                "fechaNacimiento TEXT NOT NULL," +
+                "correoElectronico TEXT NOT NULL," +
+                "tipoSangre TEXT NOT NULL," +
+                "genero TEXT NOT NULL," +
+                "edad INTEGER NOT NULL," +
+                "estado TEXT NOT NULL)");
     }
 
     @Override
