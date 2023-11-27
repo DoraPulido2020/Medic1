@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Resultados">
+    tools:context=".Medicos">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -26,23 +26,37 @@
             android:id="@+id/historialCitasTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:text="@string/resutadopaciente"
+            android:layout_marginTop="68dp"
+            android:text="@string/medicos"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/appNameTextView" />
 
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="230dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="92dp"
+            android:iconifiedByDefault="false"
+            android:queryHint="Buscar en la tabla"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/historialCitasTextView" />
+
         <TableLayout
-            android:layout_width="368dp"
-            android:layout_height="192dp"
+            android:layout_width="239dp"
+            android:layout_height="221dp"
+            android:layout_marginBottom="76dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.604"
+            app:layout_constraintHorizontal_bias="0.523"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/historialCitasTextView"
-            app:layout_constraintVertical_bias="0.338">
+            app:layout_constraintTop_toBottomOf="@+id/searchView"
+            app:layout_constraintVertical_bias="1.0">
 
             <TableRow
                 android:layout_width="match_parent"
@@ -57,46 +71,12 @@
                     android:text="@string/medico" />
 
                 <TextView
-                    android:id="@+id/textView18"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/hora" />
-
-                <TextView
                     android:id="@+id/textView19"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/ubicacion" />
+                    android:text="@string/descripcion" />
 
-                <TextView
-                    android:id="@+id/textView20"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:hint="@string/consultorio"
-                    android:text="@string/examen" />
-
-                <TextView
-                    android:id="@+id/textView21"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/tipo" />
-
-                <TextView
-                    android:id="@+id/textView22"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/resutados" />
-
-                <TextView
-                    android:id="@+id/textView23"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/ver" />
             </TableRow>
 
             <TableRow
