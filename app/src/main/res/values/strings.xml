@@ -36,5 +36,7 @@
     <string name="ver">Ver</string>
     <string name="tipo">Tipo</string>
 
+    <string name="ver_medicos">Ver medico</string>
+
 
 </resources>

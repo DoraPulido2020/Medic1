@@ -2,6 +2,7 @@ package com.example.medic1;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -77,8 +78,90 @@ public class RegistroMedico extends AppCompatActivity {
             Toast.makeText(this, "Debes llenar todos los campos", Toast.LENGTH_SHORT).show();
         }
 
-
-        Intent vmain = new Intent(this, MainActivity.class);
-        startActivity(vmain);
     }
+
+    public void obtenerMedico(View view){
+
+        DbHelper admin = new DbHelper(this);
+        SQLiteDatabase BD = admin.getWritableDatabase();
+
+        String correo = "lol";
+        Cursor medico = BD.rawQuery("Select * from usuario where correo ="+ correo, null);
+
+        if(medico.moveToFirst()){
+            String nombreM = medico.getString(1);
+            Toast.makeText(this, ("Medico encontrado" + nombreM), Toast.LENGTH_SHORT).show();
+        }
+        else{
+            Toast.makeText(this, ("No se encontro el Medico"), Toast.LENGTH_SHORT).show();
+        }
+        BD.close();
+    }
+
+    public void eliminarMedico(View view){
+
+        DbHelper admin = new DbHelper(this);
+        SQLiteDatabase BD = admin.getWritableDatabase();
+
+        String correo = "lol";
+        int cantidad = BD.delete("usuario", "correo="+correo, null);
+        BD.close();
+
+        if(cantidad == 1){
+            Toast.makeText(this, "Se elimino el medico", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            Toast.makeText(this, "No Se elimino el medico", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    public void actualizarMedico(View view){
+
+        DbHelper admin = new DbHelper(this);
+        SQLiteDatabase BD = admin.getWritableDatabase();
+
+        String nombres = "douglas";
+        String correo = "lol";
+
+        ContentValues registro = new ContentValues();
+        registro.put("nombres", nombres);
+
+        int cantidad = BD.update("usuario", registro, "correo=" + correo, null);
+        BD.close();
+
+        if(cantidad == 1){
+            Toast.makeText(this, "Actualizacion exitosa", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            Toast.makeText(this, "No se actualizo", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
